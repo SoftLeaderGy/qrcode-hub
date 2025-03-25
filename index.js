@@ -374,8 +374,8 @@ export default {
       // 登录 API
       if (path === 'api/login' && request.method === 'POST') {
         const { password } = await request.json();
-        // if (password === env.PASSWORD) {
-        if (password === 'yang.126213') {
+          if (password === env.PASSWORD) {
+        //if (password === 'yang.126213') {
           return new Response(JSON.stringify({ success: true }), {
             headers: setAuthCookie(password)
           });
